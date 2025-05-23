@@ -19,21 +19,7 @@ export default function LoginPage() {
   }, [user, loading, router, redirectTo])
 
   const handleGoogleLogin = () => {
-    // CORRECTION : Appeler l'endpoint correct de votre API AdonisJS
-    // Cette URL doit correspondre à votre route Google OAuth dans AdonisJS
-    const googleAuthUrl = `http://localhost:3333/auth/google/redirect`
-
-    // Optionnel : passer l'URL de redirection comme paramètre
-    const params = new URLSearchParams()
-    if (redirectTo !== '/dashboard') {
-      params.set('redirect_to', redirectTo)
-    }
-
-    const finalUrl = params.toString()
-      ? `${googleAuthUrl}?${params.toString()}`
-      : googleAuthUrl
-
-    window.location.href = finalUrl
+    window.location.href = `http://localhost:3333/auth/google/redirect`
   }
 
   return (
