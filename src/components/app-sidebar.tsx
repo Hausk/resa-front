@@ -25,9 +25,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     navMain: [
       {
         title: 'Office',
-        url: '/panel/map',
+        url: '/panel',
         icon: Building2,
-        isActive: pathname?.startsWith('/panel/map'),
+        isActive: pathname == '/panel',
       },
       {
         title: 'Reservations',
